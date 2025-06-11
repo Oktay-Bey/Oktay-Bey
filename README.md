@@ -8,3 +8,5 @@
 Oktay-Bey/Oktay-Bey is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+- 📑 [E-ticaret Otomasyon Yazilimi](./eticaret_otomasyon_yazilimi.md) hakkında bilgi
+
