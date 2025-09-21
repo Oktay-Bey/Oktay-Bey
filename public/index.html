@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Entegrasyon Yönetim Paneli</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="logo">E-Ticaret Entegrasyon</div>
+        <nav class="menu">
+          <button class="menu-item active" data-target="dashboard">Panel</button>
+          <button class="menu-item" data-target="settings">Ayarlar</button>
+          <button class="menu-item" data-target="products">Ürünler</button>
+        </nav>
+        <div class="sidebar-footer">
+          <p class="sidebar-tip">Trendyol ↔ WooCommerce senkronizasyonu için tek panel.</p>
+        </div>
+      </aside>
+      <main class="content">
+        <header class="page-header" id="dashboard">
+          <div>
+            <h1>Entegrasyon Paneli</h1>
+            <p>Trendyol, WooCommerce ve Supabase arasında veri akışını yönetin.</p>
+          </div>
+          <div class="header-actions">
+            <button id="syncButton" class="primary">Trendyol'dan Çek &amp; WooCommerce'e Aktar</button>
+            <select id="syncLimit">
+              <option value="20">20 ürün</option>
+              <option value="50">50 ürün</option>
+              <option value="100">100 ürün</option>
+            </select>
+          </div>
+        </header>
+
+        <section class="card hidden" id="settingsSection">
+          <div class="card-header">
+            <div>
+              <h2>Ayarlar</h2>
+              <p>API anahtarlarınızı ve bağlantı bilgilerinizi yönetin.</p>
+            </div>
+            <span class="status-pill" id="lastSync">Son senkronizasyon: —</span>
+          </div>
+          <form id="settingsForm" class="form-grid">
+            <div class="form-group">
+              <label for="trendyol_supplier_id">Trendyol Tedarikçi No</label>
+              <input type="text" id="trendyol_supplier_id" name="trendyol_supplier_id" placeholder="Örn. 123456" required />
+            </div>
+            <div class="form-group">
+              <label for="trendyol_api_key">Trendyol API Key</label>
+              <input type="password" id="trendyol_api_key" name="trendyol_api_key" placeholder="API key" required />
+            </div>
+            <div class="form-group">
+              <label for="trendyol_api_secret">Trendyol API Secret</label>
+              <input type="password" id="trendyol_api_secret" name="trendyol_api_secret" placeholder="API secret" required />
+            </div>
+            <div class="form-group">
+              <label for="woo_store_url">WooCommerce Mağaza URL</label>
+              <input type="url" id="woo_store_url" name="woo_store_url" placeholder="https://magazaniz.com" required />
+            </div>
+            <div class="form-group">
+              <label for="woo_consumer_key">WooCommerce Consumer Key</label>
+              <input type="text" id="woo_consumer_key" name="woo_consumer_key" placeholder="ck_xxx" required />
+            </div>
+            <div class="form-group">
+              <label for="woo_consumer_secret">WooCommerce Consumer Secret</label>
+              <input type="password" id="woo_consumer_secret" name="woo_consumer_secret" placeholder="cs_xxx" required />
+            </div>
+            <div class="form-group">
+              <label for="currency">Varsayılan Para Birimi</label>
+              <select id="currency" name="currency">
+                <option value="TRY">TRY</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="price_sync_strategy">Fiyat Stratejisi</label>
+              <select id="price_sync_strategy" name="price_sync_strategy">
+                <option value="match">Birebir eşle</option>
+                <option value="increase">Trendyol fiyatına yüzde ekle</option>
+                <option value="decrease">Trendyol fiyatından yüzde çıkar</option>
+              </select>
+            </div>
+            <div class="form-group toggle-group">
+              <label for="auto_publish">WooCommerce'de otomatik yayınla</label>
+              <label class="switch">
+                <input type="checkbox" id="auto_publish" name="auto_publish" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary">Ayarları Kaydet</button>
+              <span class="form-status" id="settingsStatus"></span>
+            </div>
+          </form>
+        </section>
+
+        <section class="card" id="productsSection">
+          <div class="card-header">
+            <div>
+              <h2>Ürünler</h2>
+              <p>Supabase üzerinden yönetilen ürün kayıtlarınızı görüntüleyin.</p>
+            </div>
+            <div class="search-box">
+              <input type="search" id="productSearch" placeholder="Ürün adı veya SKU ara" />
+              <button id="refreshProducts" class="ghost">Yenile</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table id="productsTable">
+              <thead>
+                <tr>
+                  <th>Ürün</th>
+                  <th>SKU</th>
+                  <th>Stok</th>
+                  <th>Fiyat</th>
+                  <th>Kaynak</th>
+                  <th>Durum</th>
+                </tr>
+              </thead>
+              <tbody id="productsBody">
+                <tr>
+                  <td colspan="6" class="empty">Ürünler yükleniyor...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
