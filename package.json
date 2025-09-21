@@ -1,0 +1,20 @@
+{
+  "name": "eticaret-entegrasyon-paneli",
+  "version": "1.0.0",
+  "description": "Trendyol ve WooCommerce entegrasyonlarını yönetmek için Supabase tabanlı panel",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "start": "NODE_ENV=production node server/index.mjs",
+    "lint": "node scripts/lint.js"
+  },
+  "keywords": [
+    "trendyol",
+    "woocommerce",
+    "supabase",
+    "integration",
+    "ecommerce"
+  ],
+  "author": "",
+  "license": "MIT"
+}
