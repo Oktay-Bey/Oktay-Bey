@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DreamTracker AI</string>
+    <string name="dream_list_title">Rüya Günlüğü</string>
+    <string name="add_dream">Yeni Rüya Kaydı</string>
+    <string name="empty_state">Henüz kayıtlı rüya yok. Yukarıdaki formu kullanarak ilk notunuzu ekleyin.</string>
+</resources>
