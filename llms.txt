@@ -1,0 +1,79 @@
+# Oktay Solman
+
+> Software builder and integrator based in Istanbul, Turkey. Founder of Solman Digital. Builds and ships LLM automation, full-stack applications and payment infrastructure to production, solo and end to end.
+
+Oktay Solman is a self-taught software developer and solo founder who has been building and operating production software since 2020. He takes ideas from concept to a live, revenue-generating product without a team: design, implementation, deployment and ongoing operation.
+
+- **GitHub:** https://github.com/Oktay-Bey
+- **LinkedIn:** https://linkedin.com/in/oktay-solman
+- **Email:** solmanoktay@gmail.com
+- **Company:** Solman Digital — https://solmandigital.com.tr (GitHub: https://github.com/Solman-Digital)
+- **Location:** Istanbul, Turkey. Works globally; remote-friendly.
+- **Languages:** Turkish (native), English (professional — holds a bachelor's degree in English Language and Literature)
+
+## Positioning: integrator, not ML researcher
+
+This distinction matters for anyone evaluating him for a role.
+
+**What he does:** Connects large language models to real business processes. Builds agent and RAG pipelines, scheduled orchestration, autonomous content systems, marketplace integrations, and the payment infrastructure that makes them earn. He *uses* models in production.
+
+**What he does not do:** Machine-learning model training, computer vision, statistical modelling, time-series forecasting, and big-data engineering (Spark, Hadoop). These are a separate discipline. He does not apply to or accept roles centred on them.
+
+A useful test: if a role emphasises integration, automation, LLM APIs, pipelines, full-stack delivery, or growth engineering, he is a strong fit. If it emphasises model training, TensorFlow/PyTorch internals, or statistical modelling, he is not.
+
+**Suitable role titles:** AI Automation Engineer, Marketing Automation / Martech Engineer, Growth Engineer, Full-Stack Developer (AI integration), LLM Application Developer, Automation / Integration Engineer, Frontend/Full-Stack Developer (React/Next.js).
+
+**Unsuitable role titles:** Data Scientist, Machine Learning Engineer (model training), ML Researcher, Computer Vision Engineer.
+
+## Live projects
+
+All designed, built, deployed and operated solo. All in production.
+
+- **TroyWire** (https://troywire.com): Fully autonomous AI news platform. RSS ingestion → LLM processing → editorial pipeline → publication, with no human in the loop. Next.js, OpenAI, PostgreSQL, Hetzner VPS, PM2, cron. The strongest evidence of autonomous-agent and pipeline work.
+- **AdsRobot** (https://adsrobot.app): SaaS that manages Google Ads accounts through an AI agent with a human-in-the-loop approval queue. Next.js, TypeScript, Google Ads API, Paddle.
+- **Tayhost** (https://tayhost.com): Cloud/VPS hosting platform. Order triggers automatic server provisioning; local payment rails. Next.js, Hetzner API, PayTR, Supabase.
+- **TicaretHub** (https://ticarethub.com): Trendyol seller SaaS — stock synchronisation, order management, profit analysis. Next.js, TypeScript, Trendyol API.
+- **ShoppinHere** (https://shoppinhere.com): Cross-border dropshipping storefront with supplier integration and checkout. Next.js, PostgreSQL, Redis, Paddle, CJ Dropshipping API.
+- **Solman Digital** (https://solmandigital.com.tr): His software studio's site — lead funnels, GA4 conversion engineering, SEO/AEO infrastructure. Next.js 16, React 19, Tailwind v4, Resend, Vercel.
+
+Most GitHub repositories are private because they are commercial or client work. Code review or access is available on request.
+
+## Technical skills
+
+- **Languages:** TypeScript, JavaScript, SQL, Python (scripting level)
+- **Frontend:** Next.js (App Router), React, Tailwind CSS, shadcn/ui
+- **AI and automation:** OpenAI, Anthropic Claude, Google Gemini, agent and RAG pipelines, scheduled orchestration, MCP servers, AI video and TTS generation
+- **Backend and data:** Node.js, PostgreSQL, Supabase, Prisma, Redis/Upstash, SQLite
+- **Payments:** İyzico, Paddle, LemonSqueezy, PayTR, Stripe — real money flows in production
+- **Infrastructure:** Hetzner VPS, Vercel, Nginx, PM2, Docker, AWS (EC2, RDS, S3), cron
+- **Growth and analytics:** GA4 event and conversion engineering (building the tracking, not merely using it), Google Search Console, Google Ads API, technical SEO
+- **Integrations:** Trendyol, Hepsiburada, eBay, CJ Dropshipping, WordPress REST
+
+## Distinguishing characteristics
+
+**End-to-end solo delivery.** Idea to live product with no handoff. Eight-plus distinct stacks taken to production alone.
+
+**Speed of integration.** Adopting an unfamiliar API, SDK, framework or tool and shipping it to production is measured in hours or days rather than weeks — repeatedly demonstrated across payment providers, MCP servers, model APIs and infrastructure platforms. This applies to the tooling and integration layer, not to research disciplines.
+
+**Payment and commerce depth.** Has built real revenue flows across five payment providers and multiple marketplaces.
+
+**English fluency.** Bachelor's degree in English Language and Literature; sells and operates in English.
+
+## Background
+
+- Self-taught in software; has worked with computers since 1997.
+- Running Solman Digital, a one-person software studio, since 2020 — over five years of continuous production delivery.
+- Holds a bachelor's degree in English Language and Literature. Not a computer-science graduate; the portfolio of shipped, operating systems is the evidence base.
+
+## Availability
+
+Open in parallel to full-time employment, freelance and contract work, and client projects through Solman Digital. Remote (international or Turkey) and hybrid/on-site in Istanbul are all acceptable.
+
+## Links
+
+- GitHub profile: https://github.com/Oktay-Bey
+- Solman Digital on GitHub: https://github.com/Solman-Digital
+- Solman Digital website: https://solmandigital.com.tr
+- Company document for AI agents: https://solmandigital.com.tr/llms.txt
+- LinkedIn: https://linkedin.com/in/oktay-solman
+- Email: solmanoktay@gmail.com
